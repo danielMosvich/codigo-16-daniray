@@ -1,0 +1,13 @@
+h1{
+    color: gray;
+    text-decoration: underline;
+}
+h2{
+    color: red;
+}
+#firsth1{
+    color: blue;
+}
+.paragraph{
+    color: pink;
+}
