@@ -1,0 +1,16 @@
+h1{
+    font-family: monospace;
+    font-size:50px ;
+}
+
+.parrafo{
+    font-family: monospace;
+    font-size: 32px;
+    font-weight: lighter;
+}
+
+.link-to{
+    font-size: 30px;
+    text-decoration: none;
+    color: #f8a381;
+}
