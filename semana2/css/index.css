@@ -14,3 +14,35 @@ h1{
     text-decoration: none;
     color: #f8a381;
 }
+body{
+    font-family: monospace ;
+    font-size: 20px;
+}
+
+ul{
+    background-color:rgba(172, 172, 172, 0.164);
+}
+.span-1{
+    text-decoration: dashed;
+    background: rgb(255, 98, 98);
+}
+.span-2{
+    text-decoration: dotted;
+    background: rgb(255, 169, 98);
+}
+.span-3{
+    text-decoration: double;
+    background: rgb(239, 255, 98);
+}
+.span-4{
+    text-decoration: line-through;
+    background: rgb(111, 255, 98);
+}
+.span-5{
+    text-decoration: overline;
+    background: rgb(98, 255, 229);
+}
+.span-6{
+    text-decoration: wavy;
+    background: rgb(98, 179, 255);
+}
