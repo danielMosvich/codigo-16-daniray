@@ -1,15 +1,17 @@
 h1{
-    font-family: monospace;
+    font-family: 'Nova Mono', monospace;
     font-size:50px ;
 }
 
 .parrafo{
     font-family: monospace;
-    font-size: 32px;
+    font-size: 22px;
     font-weight: lighter;
+    background: #0000001a;
 }
 
 .link-to{
+    font-family: 'Nova Mono', monospace;
     font-size: 30px;
     text-decoration: none;
     color: #f8a381;
@@ -23,26 +25,43 @@ ul{
     background-color:rgba(172, 172, 172, 0.164);
 }
 .span-1{
+    font-family: 'Nova Mono', monospace;
     text-decoration: dashed;
-    background: rgb(255, 98, 98);
+    background: rgb(255, 178, 178);
 }
 .span-2{
+    font-family: 'Nova Mono', monospace;
     text-decoration: dotted;
-    background: rgb(255, 169, 98);
+    background: rgb(255, 216, 185);
 }
 .span-3{
     text-decoration: double;
-    background: rgb(239, 255, 98);
+    background: rgb(249, 255, 191);
 }
 .span-4{
     text-decoration: line-through;
-    background: rgb(111, 255, 98);
+    background: rgb(196, 255, 191);
+    text-decoration-color: #00000080;
 }
 .span-5{
     text-decoration: overline;
-    background: rgb(98, 255, 229);
+    background: rgb(184, 255, 243);
 }
 .span-6{
     text-decoration: wavy;
-    background: rgb(98, 179, 255);
+    background: rgb(182, 220, 255);
+}
+
+@font-face{
+    font-family: 'Monoton';
+    src: url(../fonts/Monoton-Regular.ttf);
+}
+
+.second-title{
+    font-family: 'Monoton';
+    font-weight: 400;
+    font-size: 50px;
+}
+.second-paragrap{
+    font-family: 'Nova Mono', monospace;
 }
