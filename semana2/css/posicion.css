@@ -1,0 +1,29 @@
+body{
+    font-family: monospace;
+}
+
+.bg{
+    border: solid black;
+    height: 200px;
+}
+
+.color-red{
+    background-color: red;
+}
+.color-green{
+    background-color: green;
+}
+.color-imagen{
+    background: url('https://i.pinimg.com/564x/9f/a0/1c/9fa01cc832e20804537e158b62fa1fa2.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.color-imagen2{
+    color: white;
+    background-image: url(https://i.pinimg.com/originals/a7/fc/aa/a7fcaa43650adc892c401956a08dc32a.jpg);
+    height: 500px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+}
