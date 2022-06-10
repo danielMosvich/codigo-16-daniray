@@ -24,7 +24,7 @@ a{
 .contenedor{
     /* background-color: red; */
     width: 100%;
-    height: 100vh;
+    height: 50vh;
     position: relative;
     top: 100px;
     z-index: 5;
@@ -40,5 +40,5 @@ a{
 #nosotros{
     height: 100vh;
     background-color: purple;
-    margin-top: 200px;
+    margin-top: 170px;
 }

@@ -1,0 +1,33 @@
+body{
+    background-color: #d1d1d1;
+}
+
+.contenedor{
+    width: 200px;
+    height: 150px;
+    background: linear-gradient(90deg, #fa0000 33%, #ffffff 33%, #ffffff 66%, #ff0101 66%);
+    margin: auto;
+    transition:all .4s;
+}
+.contenedor:hover{
+    width: 300px;
+    transition:all .4s;
+    background: red;}
+.shadow-text{
+    text-shadow: 5px 5px 10px rgb(19, 19, 19);
+}
+
+#circulo{
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,201,0,1) 0%, rgba(255,111,0,1) 38%, rgba(255,61,0,1) 50%, rgba(255,2,2,1) 52%, rgba(0,0,0,1) 59%);
+    margin: 50px auto;
+    border-radius: 10%;
+    transition: 5s;
+}
+#circulo:hover{
+    border-radius: 10px;
+    background: blue;
+    transition-timing-function: inherit;
+    transition: 0s;
+}
