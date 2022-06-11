@@ -30,6 +30,7 @@ body{
     border-radius: 10px;
     margin-top: 20px;
 }
+
 .contenedor-icon{
     width: 100%;
     margin: auto;
@@ -55,6 +56,9 @@ h3{
     color: white;
     margin-top: 20px;
 }
+h3:hover{
+    color: #00fff7;
+}
 p{
     font-size: 19px;
     /* width: 90%; */
@@ -65,6 +69,9 @@ p{
 }
 span{
     color: white;
+}
+span:hover{
+    color: #00fff7;
 }
 .contenedor-footer{
     width: 100%;
@@ -87,4 +94,17 @@ span{
     margin-left: 15px;
     bottom: 9px;
     /* margin-bottom: 20px; */
+}
+.div-imagen:hover{
+    background: red;
+}
+.uwu{
+}
+.contenedor-interno img:hover{
+    display: none;
+}
+.uwu:hover{
+    width: 100px;
+    height: 100px;
+    background-color: red;
 }
