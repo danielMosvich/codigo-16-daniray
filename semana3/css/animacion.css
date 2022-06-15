@@ -1,0 +1,14 @@
+#box{
+    width: 200px;
+    height: 200px;
+    background-color: #C8102E;
+    border: solid;
+    transition: all 2s;
+}
+#box:hover{
+    width: 400px;
+    height: 300px;
+    background: #C8102E;
+background: linear-gradient(90deg, #C8102E 33%, #ffffff 33%, #ffffff 66%, #C8102E 66%);
+    transition: all 2s;
+}

@@ -1,0 +1,13 @@
+.container{
+    height: 100vh;
+    border: solid 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.container div{
+    height: 200px;
+    width: 200px;
+    border: solid red 3px;
+}
