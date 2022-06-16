@@ -93,3 +93,93 @@ section p{
     font-size: 12px;
     font-weight: 100;
 }
+.contenedor-weekly{
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 0 9%;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+.contenedor-weekly div img{
+    width: 100%;
+}
+.description{
+    font-size: 12px;
+}
+.contenedor-precio{
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.precios{
+    display: flex;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.old-price{
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 14px;
+    color: gray;
+}
+.add-car{
+    display: flex;
+    justify-content: end;
+}
+.add-car a{
+    font-weight: bold;
+    font-size: 13px;
+    color: black;
+}
+
+@media only screen and (max-width: 1500px){
+h2{
+    font-size: 40px;
+}
+.contenedor-weekly{
+    flex-wrap: wrap;
+}
+
+.contenedor-weekly div{
+    width: 40%;
+    /* flex-direction: column; */
+    /* width: 100% !important; */
+    flex-wrap: wrap;
+}
+.contenedor-precio{
+    width: 100% !important;
+    /* justify-content: center; */
+}
+}
+
+@media only screen and (max-width: 1000px){
+h2{
+    font-size: 30px;
+}
+.small-child{
+    width: 35%;
+}
+.big-child{
+    width: 35%;
+}
+
+}
+
+@media only screen and (max-width: 480px){
+.small-child{
+    width: 100%;
+}
+.big-child{
+    width: 100%;
+}
+.contenedor-weekly > div{
+    width: 100%;
+}
+}
