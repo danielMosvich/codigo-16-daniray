@@ -44,12 +44,14 @@ header li a:hover{
     min-width: 160px;
     box-shadow: 0 0 10px gray;
     z-index: 1;
+    margin-left: -100px;
 }
 
 
 
 .dropdown-content li{
     padding: 10px;
+
 }
 .dropdown-content li a{
     padding: 10px;
@@ -70,15 +72,32 @@ header li a:hover{
 body{
     background-color: rgb(255, 189, 163);
 }
+header div h2{
+    font-size: 1em;
+    margin-bottom: 20px;
+}
 header{
     border: solid;
     flex-direction: column;
     align-items: flex-start;
     height: 100vh;
     justify-content: flex-start;
-    width: 45%;
+    font-size: 1em;
+    width: 20%;
+    min-width: 90px;
     gap: 20px;
+    transition: all .4s;
+    padding-top: 20px;
+    padding-left: 10px;
+    border: none;
+    border-right: 2px solid black;
+
     /* padding: 10px 0 0 10px; */
+}
+header:hover{
+    width: 30%;
+    padding: 20px 20px 0 20px;
+    transition: all .4s;
 }
 header ul{
     flex-direction: column;
@@ -86,8 +105,11 @@ header ul{
 
 }
 
-nav{
+/* nav{
     border: solid green;
+} */
+.dropdown-content{
+    margin: 0;
 }
 }
 
