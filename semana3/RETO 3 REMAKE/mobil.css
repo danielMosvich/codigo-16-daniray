@@ -1,0 +1,123 @@
+
+@media only screen and (max-width: 980px) {
+    .contenedor-slogan{
+        /* margin-top: 100px; */
+        text-align: center;
+    }
+    main .container-1{
+        height: auto;
+        flex-direction: column-reverse;
+    }
+    main .container-2{
+        height: auto;
+        flex-direction: column;
+    }
+    main .container-3{
+        height: auto;
+        flex-direction: column;
+    }
+    main .container-1 .first-content{
+        width: 100%;
+        /* height: 60vh; */
+    }
+    main .container-1 .second-content{
+        width: 100%;
+        /* height: 60vh; */
+    }
+    main .container-2 .first-content{
+        width: 100%;
+        /* height: 60vh; */
+    }
+    main .container-2 .second-content{
+        width: 100%;
+        /* height: 60vh; */
+    }
+    
+}
+
+@media only screen and (max-width: 980px) {
+    header nav{
+        padding: 0 30px;
+    }
+    .contenedor-slogan{
+        margin-top: 100px;
+        /* text-align: center; */
+    }
+    header .contenedor-slogan{
+        height: 40vh;
+        gap: 100px;
+    }
+    main .content-text{
+        text-align: center;
+        align-items: center;
+    }
+    main .content-text p{
+        text-align: center;
+    }
+    main .content-text h3{
+        text-align: center;
+        width: auto;
+    }
+    main .container-3{
+        height: auto;
+    }
+    main .container-3 .design{
+        width: 100%;
+        height: 60vh;
+        color: red;
+    }
+    main .testimonials-container{
+        padding: 100px 0;
+        height: auto;
+        text-align: center;
+    }
+    section .profiles{
+        flex-direction: column;
+        gap: 50px;
+    }
+    main .galery-content img{
+        width: 50%;
+        height: 300px;
+        object-fit: cover;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .contenedor-slogan{
+        /* margin-top: 100px; */
+        /* text-align: center; */
+        font-size: 0.6em;
+    }
+    main .container-1 .first-content h3{
+        font-size: 2em;
+    }
+    main .container-2 .first-content h3{
+        font-size: 2em;
+    }
+    main .container-2 .first-content{
+        padding: 50px 0;
+    }
+    main .container-1 .first-content{
+        padding: 50px 0;
+    }
+    main .content-text{
+        width: 90%;
+    }
+    main .content-text .content-more a h3 {
+        font-size: 3em;
+    }
+    main .content-more a{
+        transform: none;
+    }
+    main .design div{
+        width: 90%;
+    }
+    main .testimonials-container h3{
+        font-size: 1.3em;
+    }
+    footer ul{
+        justify-content: space-around;
+        font-size: 1em;
+    }
+
+}

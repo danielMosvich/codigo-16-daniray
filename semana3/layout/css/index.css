@@ -1,0 +1,42 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+header{
+    background-color: #2ccac1;
+    height: 10vh;
+    text-align: center;
+}
+/* *main !---------------------------------------------------------------- */
+main{
+    height: 70vh;
+    text-align: center;
+    display: flex;
+}
+aside{
+    background-color: #6edc6e;
+    flex-grow: 1;
+    /* width: 15%; */
+}
+.container{
+    background-color: #fbb14a;
+    flex-grow: 3;
+    /* width: 85%; */
+}
+footer{
+    background-color: #2ccac1;
+    height: 20vh;
+    text-align: center;
+}
+/* *media queries ----------------------------------------------------------*/
+@media only screen and (max-width: 600px){
+    main{
+        flex-direction: column;
+    }
+}
