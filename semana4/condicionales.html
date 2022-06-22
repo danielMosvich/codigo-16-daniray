@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <h1>Martes 21 de Julio</h1>
+    <h2>condicionales + document.write()</h2>
+    <hr>
+</body>
+<script type="text/javascript">
+
+
+
+    document.write("<h3>NOTA</h3>"); 
+    // let nota = Number(prompt('ingrese nota'));
+    let nota = 10
+    if (isNaN(nota)){
+        alert('solo numeros por favor')
+        nota = Number(prompt('ingrese nota'));
+    }
+    // let nota = 10;
+    if (nota < 11){
+        document.write(`<h3 style="color:red">${nota}</h3>`);
+        document.write("<p style='color:red;'> desaprobado </p>");
+    } else {
+        document.write(`<h3 style="color:green">${nota}</h3>`);
+        document.write("<p style='color:green;'> aprobado </p>");
+    }
+
+    document.write("<hr>");
+    document.write("<h3>Angulos</h3>");
+    let angulo = 90;
+    document.write(`<p> ${angulo}</p>`);
+
+    if (angulo == 0){
+        document.write("<p>Nulo</p>")
+    } else if (angulo < 90){
+        document.write("<p>Agudo</p>")
+    } else if (angulo == 90){
+        document.write("<p>Recto</p>")
+    } else if (angulo < 180){
+        document.write("<p>Obtuso</p>")
+    } else if (angulo == 180){
+        document.write("<p>Llano</p>")
+    } else if (angulo < 360){
+        document.write("<p>Concavo</p>")
+    } else if (angulo == 360){
+        document.write("<p>Completo</p>")
+    } else {
+        document.write("<p>No existe</p>")
+    }
+    // -----------------------------------------
+    // if (angulo < 90){
+    //     document.write("<p>Agudo</p>")
+    // } else {
+    //     if (angulo == 90){
+    //         document.write("<p>Recto</p>")
+    //     } else {
+    //     if (angulo < 180){
+    //         document.write("<p>Obtuso</p>")
+    //         } else {
+    //             if (angulo == 180){
+    //                 document.write("<p>Llano</p>")
+    //             } else {
+    //                 if (angulo < 360){
+    //                     document.write("<p>Concavo</p>")
+    //                 } else {
+    //                     if (angulo == 360){
+    //                         document.write("<p>completo</p>")
+    //                     } else{
+    //                         document.write("<p>no existe</p>")
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     } 
+    // } 
+    // RETOOOOOOOOOOOOO
+    // document.write("<hr>")
+    // document.write("<h3>TEMPERATURA</h3>")
+    // let temperatura = Number(prompt("ingrese temperatura"))
+
+    // if (isNaN(temperatura)){
+    //     alert("solo numeros")
+    //     temperatura = Number(prompt("ingrese temperatura"))
+    // }
+    // document.write(temperatura)
+
+    // if (temperatura <= 10){
+    //     document.write("<p style='color:blue;'>Clima Frio</p>")
+    // } else if (temperatura <= 16){
+    //     document.write("<p style='color:lightblue;'>Clima Templado</p>")
+    // } else if (temperatura <=24){
+    //     document.write("<p style='color:brown'>Clima Calido</p>")
+    // } else if (temperatura > 24){
+    //     document.write("<p style='color:green'>Clima Tropical</p>")
+    // } 
+
+    let hora = 5;
+    let sky;
+    // if (hora < 18 && hora >= 6){
+    //     sky = 'dia'
+    // } else {
+    //     sky = 'noche'
+    // }
+    sky = (hora < 18 && hora >= 6) ? 'dia' : 'noche';
+    
+    document.write("<p style='color:blue'>cielo es de: "+ sky+"</p>")
+    // let nombre = "Nath"
+    // let edad = 31;
+    // let estadoCivil = 'soltera';
+    // let numeroHijos = 0;
+
+    // if (edad > 30 || estadoCivil == "casada" || numeroHijos > 0){
+    //     document.write("<p style='color:blue'>Buenos dias seniora:"+nombre+"</p>")
+    // } else {
+    //     document.write("<p style='color:green'>Buenos dias seniorita:" +nombre+"</p>")
+    // }
+    let idk = document.getElementsByTagName("h1")[0].innerHTML;
+    alert(idk)
+
+//     if(edad>30||(estado_civil="casada"&&numero_hijos>0)){
+//         termino = "a";}
+// document.write("<p>Buen día señor"+termino+" "+nombre+"<p>");
+</script>
+</html>
