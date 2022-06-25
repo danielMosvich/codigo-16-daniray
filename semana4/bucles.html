@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:url('https://i.pinimg.com/236x/9f/05/9f/9f059f472db556d9329064d7dfbb51d6.jpg');
+            /* background-size: cover; */
+            /* backdrop-filter: blur(20px); */
+
+        }
+        #container{
+            width: 300px;
+            min-height: 100px;
+            background-color: #ff6347;
+            margin: 50px auto;
+            border-radius: 10px;
+            padding: 10px;
+            /* backdrop-filter: blur(2px); */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">Holi</div>
+</body>
+<script>
+    
+    const div_container = document.getElementById('container') 
+    div_container.innerHTML = '<h1>Bucles</h1>'
+    
+    let frutas = ['pera','manzana','limon','fresa','naranja']
+
+    for(let i = 0; i < frutas.length; i++){
+        div_container.innerHTML += `<p>${frutas[i]}</p>`
+    }
+    // let i = 0
+    // while (i < frutas.length){
+    //     div_container.innerHTML += `<p>${frutas[i]}</p>`
+    //     if (frutas[i] == 'limon'){
+    //         break
+    //     }
+    //     i += 1
+    // }
+    // div_container.innerHTML += `<hr>`
+
+    // for (let i = 1; i <= 1; i++) {
+    //     div_container.innerHTML += `<h1>Tabla del ${i}</h1>`
+    //     for (let j = 0; j <= 20; j++) {
+    //         if(j % 2 == 0){continue}
+    //         div_container.innerHTML += `<p>${i} x ${j} = ${j*i}</p>`
+    //     }
+    // }
+    div_container.innerHTML += `<hr>`
+    const frase = 'amo programar'
+    for (let i of frase){
+        if (i == ' ') continue
+        div_container.innerHTML += `<h3>- ${i}</h3>`
+    }
+
+    let productos = [
+        'mouse', 'teclados', 'parlante', 'monitore', 'celular', 'adaptador','cargador'
+    ]
+
+    for (let producto of productos) {
+        div_container.innerHTML += `<h1>- ${producto}</h1>`
+    }
+    // alert(productos[0])
+    for (let producto in productos){
+        div_container.innerHTML += `<h1>- ${producto}</h1>`
+    }
+    
+
+</script>
+</html>

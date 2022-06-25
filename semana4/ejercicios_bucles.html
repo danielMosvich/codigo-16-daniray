@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 300px;
+            min-height: 100px;
+            background-color: #ff6347;
+            margin: 50px auto;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .display-l{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+<script>
+    const div_container = document.getElementById('container') 
+    div_container.innerHTML += `<h1>Ejercicio de 25 numeros primos</h1>`
+    // div_container.innerHTML = '<h1>Ejercicios Bucles</h1>'
+
+    //factorial;
+    // const numero = 6
+    // div_container.innerHTML = '<h1>Factorial de '+ numero +'</h1>'
+    // let factorial = 1;
+    // for (let i = 1; i <= numero; i++){
+    //     factorial = factorial * i;
+    // }
+    // div_container.innerHTML += '<h3>Resultado: '+factorial+'</h3>'
+
+    
+    // div_container.innerHTML += `<h1>Ejercicio</h1>`
+    // div_container.innerHTML += '<hr>'
+
+    // let a = 7
+    // let b = 0
+    // for (let i = 10; i < 97; i += 10) {
+    //     b += i + a;
+    // }
+    // div_container.innerHTML += `<h2>Resultado: ${b}</h2>`
+
+
+    // let numero = 3;
+    // for(let i = 2;i < numero; i ++){
+    //     if(numero % i == 0){
+    //         console.log('no es primo')
+    //     } else{
+
+    //         console.log('es primo')
+    //     }
+    // }
+//------------------------------------------------------
+    // let nRepeticiones = 97
+
+    // for (let i = 2; i < nRepeticiones + 2; i++) {
+    //     let comparador = true
+    //     if(i > 2){
+    //         let n = 2;
+    //         while(n < i){
+    //             if(i % n == 0){
+    //                 comparador = false
+    //                 break
+    //             }
+    //             comparador = true
+    //             n += 1
+    //         }
+    //         if(comparador){
+    //             div_container.innerHTML += `<p style="display: inline;">- ${i}</p>`
+    //         } 
+    //     } else if (i == 2){
+    //         console.log(i)
+    //         div_container.innerHTML += `<p style="display: inline;">${i}</p>`
+    //     }
+    // }
+
+    
+    let cantidad = 100
+    let a = 3;
+    let b;
+    div_container.innerHTML += `<p class="display-l">2</p>`
+    for (let i = 0; i < cantidad-1; i++) {
+        let comparador = true
+        b = 2;
+        while(b < a){
+            //b = 2 || a == 3
+            if(a % b == 0){
+                comparador = false;
+                break
+            }
+            comparador = true
+            b++
+        }
+        if (comparador == true){
+            div_container.innerHTML += `<p class="display-l"> - ${a}</p>`
+        }
+        if(comparador == false){
+            i--
+        }
+        a += 1
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    // const primo = (numero)=>{
+    //     if(numero < 2){
+    //         return false;
+    //     }
+    //     for (let i =2; i < numero; i++) {
+    //         console.log(`${i} / ${numero} = ${i/numero}`);
+    //         if(numero % i ===0){
+    //             return false
+    //         }
+            
+    //     }
+    //     console.log(numero)
+    //     return true
+    // }
+    // console.log(primo(2))
+</script>
+</html>

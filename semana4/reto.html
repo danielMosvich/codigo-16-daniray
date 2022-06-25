@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+
+document.write('<h1>Reto 1</h1>');
+document.write("<hr>")
+
+let nombre = prompt('ingrese su nombre');
+let genero = prompt('ingrese su genero');
+let edad = Number(prompt('ingrese su edad'));
+let nota = Number(prompt('ingrese nota del 0 al 10'));
+let frase = '';
+let calificacion = '';
+let style = '';
+document.write(`<p>Nombre: ${nombre}</p>`)
+document.write(`<p>genero: ${genero}</p>`)
+document.write(`<p>Edad: ${edad}</p>`)
+document.write(`<p>nota: ${nota}</p>`)
+
+document.write("<hr>")
+
+if (genero == 'hombre' && edad >= 35){
+    frase = 'El señor: '
+} else if(genero == 'hombre' && edad < 35){
+    frase = 'El Joven: '
+} else if(genero == 'mujer' && edad >=50){
+    frase = 'La Señora: '
+} else if (genero == 'mujer' && edad < 50){
+    frase = 'La Señorita: '
+}
+
+if(nota < 3){
+    calificacion = 'Es muy deficiente';
+    style = 'red';
+} else if (nota < 5){
+    calificacion = 'Es Insuficiente';
+    style = 'orange';
+} else if (nota < 6){
+    calificacion = 'Es Suficiente';
+    style = 'yellow';
+} else if (nota < 7){
+    calificacion = 'Esta Bien';
+    style = 'blue';
+} else if (nota < 9){
+    calificacion = 'Es Notable';
+    style = 'green';
+} else if (nota <= 10){
+    calificacion = 'Es sobresaliente';
+    style = 'lightgreen';
+} else {
+    calificacion = 'ingrese una nota del 0 al 10 por favor';
+    style = 'red';
+}
+
+
+
+document.write(`${frase} ${nombre} (${edad} años) tiene <h3 style='display: inline; color:${style};}'>${nota}</h3> de nota,<h3 style='display: inline; color:${style};}'> ${calificacion} </h3>`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
