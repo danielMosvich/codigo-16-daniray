@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{  
+        font-family: monospace;
+        font-size: 15px;
+    }
+    #container{
+        width: 400px;
+        min-height: 200px;
+        background-color: teal;
+        border: 2px solid black;
+        margin: 50px auto;
+    }
+    .contenedor{
+        /* width: 100%; */
+        /* height: 100%; */
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: tomato;
+        gap: 10px;
+    }
+    .entrada_container{
+        /* background-color: rgba(122, 255, 255, 0.089); */
+        padding: 20px;
+        /* height: 20px; */
+    }
+</style>
+<body>
+    <div id="container">
+        <div class="contenedor">
+            <h2>Autos</h2>
+            <input type="text">
+            <button>add</button>
+            <button>reset</button>
+        </div>
+        <hr>
+        <div class="entrada_container"></div>
+    </div>
+</body>
+<script src="./js/objetos.js"></script>
+</html>

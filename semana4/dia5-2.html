@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: sans-serif;
+    }
+    .container,.container2{
+        background-color: teal;
+        width: 400px;
+        min-height: 400px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    button{
+        padding: 10px;
+        background-color: antiquewhite;
+        border-radius: 10px;
+        border: none;
+    }
+    input{
+        padding: 5px;
+        border-radius: 10px;
+        outline: 2px solid rgb(80, 189, 135);
+        border: none;
+        margin: 5px;
+    }
+    .btn2{
+        margin: 20px auto 0;
+        /* float: right; */
+    }
+</style>
+<body>
+    <div class="container">
+        <input type="text" id="input_name" placeholder="ingrese nombre">
+        <button onclick="imprimirAlumnos()">Agregar alumno</button>
+        <div>
+            <h4>Lista de alumno</h4>
+            <div class="resultado">
+
+            </div>
+        </div>
+    </div>
+    <div class="container2">
+        <input type="text" id="input_name1" placeholder="ingrese la nota: 1">
+        <input type="text" id="input_name2" placeholder="ingrese la nota: 2">
+        <input type="text" id="input_name3" placeholder="ingrese la nota: 3">
+        <input type="text" id="input_name4" placeholder="ingrese la nota: 4">
+        <button onclick="varificarPromedio()" class="btn2">calcular promedio</button>
+        <div>
+            <h4>Promedio</h4>
+            <div class="resultado2">
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/dia5-2.js"></script>
+</html>
