@@ -1,0 +1,108 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: monospace;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px #80808071;
+    margin: 20px;
+    width: 20%;
+    min-width: 350px;
+    /* border: solid; */
+}
+.container-photo{
+    text-align: center;
+    /* border: solid; */
+}
+img{
+    padding: 10px;
+    height: 300px;
+    /* width: 500px; */
+    width: 100%;
+    object-fit: contain;
+}
+h1{
+    text-align: center;
+}
+.section{
+    text-align: center;
+}
+#input-search{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid;
+    outline: none;
+    width: 300px;
+}
+
+#btn-search{
+    border: 1px solid rgb(0, 0, 0);
+    padding: 8px;
+    background: rgb(255, 100, 95);
+    background: linear-gradient(180deg, rgb(255, 95, 95) 0%, rgb(255, 60, 0) 100%);
+    border-radius: 5px;
+    /* border: none; */
+    color: white;
+    width: 80px;
+    font-weight: bold;
+}
+#btn-clear{
+    border: 1px solid rgb(0, 0, 0);
+    padding: 8px;
+    background: rgb(255, 100, 95);
+    background: linear-gradient(180deg, rgb(255, 95, 95) 0%, rgb(255, 60, 0) 100%);
+    border-radius: 5px;
+    /* border: none; */
+    color: white;
+    width: 150px;
+    font-weight: bold;
+}
+.title{
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
+}
+.container-price{
+    display: flex;
+    justify-content: space-around;
+    /* text-decoration: line-through; */
+    align-items: center;
+}
+.sale-price{
+    color: #000000fb;
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
+.price-promotion{
+    color: rgba(0, 0, 0, 0.445);
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+.btn-buy{
+    border: none;
+    background-color: rgb(255, 108, 108);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 8px;
+    width: 95%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* @media only screan and (max-width: 768px){
+    .card{
+        width: 100%;
+    }
+} */
