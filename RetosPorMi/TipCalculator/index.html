@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="tip-container">
+            <h2>SPLI</h2>
+            <h2>TTER</h2>
+            <div class="tip-calculator">
+                <div class="calculator-touch">
+                    <div class="bill">
+                        <h3>Bill</h3>
+                        <div class="bill-input">
+                            <img src="./imgs/icon-dollar.svg" alt="">
+                            <input type="text" placeholder="0" id="bill-input">
+                        </div>
+                    </div>
+                    <div class="select-tip">
+                        <h3>Select tip %</h3>
+                        <div class="tip" id="tip_1">5%</div>
+                        <div class="tip" id="tip_2">10%</div>
+                        <div class="tip" id="tip_3">15%</div>
+                        <div class="tip" id="tip_4">25%</div>
+                        <div class="tip" id="tip_5">50%</div>
+                        <input class="tip-input"type="text" placeholder="Custom" id="cusmtom-input">
+                    </div>
+                    <div class="bill">
+                        <h3>Number of people</h3>
+                        <div class="bill-input">
+                            <img src="imgs/icon-person.svg" alt="">
+                            <input type="text" placeholder="0" >
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ? pantalla de precios -->
+                <div class="calculator-display">
+                    <div class="display-prices">
+                        <div class="display-amount">
+                            <div class="amount-tip">
+                                <h3>Tip Amount</h3>
+                                <p>/ person</p>
+                            </div>
+                            <div class="amount-price">
+                                <h2>$0.00</h2>
+                            </div>
+                        </div>
+                        <div class="display-total">
+                            <div class="amount-tip">
+                                <h3>Total</h3>
+                                <p>/ person</p>
+                            </div>
+                            <div class="amount-price">
+                                <h2>$0.00</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="display-btn inactive">Reset</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="./index.js"></script>
+</html>

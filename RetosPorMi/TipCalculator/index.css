@@ -1,0 +1,287 @@
+:root{
+    --display-text:hsl(172, 67%, 45%);
+    --display-bg:hsl(183, 100%, 15%);
+    --main-bg:hsl(185, 41%, 84%);
+    --text-second:hsl(184, 14%, 56%);
+    --input-color:hsl(189, 41%, 97%);
+    --hover-buton-color:#9EE7DE;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-bg);
+    display:flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+.tip-container{
+    min-width: 60%;
+    max-width: 1440px;
+    height: 85%;
+    /* background-color: teal; */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    text-align: center;
+}
+.tip-container > h2{
+    letter-spacing: 5px;
+    font-size: 1.8em;
+    color: var(--text-second);
+}
+.tip-calculator{
+    background-color: white;
+    width: 100%;
+    height: 70%;
+    margin-top: 70px;
+    border-radius: 20px;
+    display: flex;
+    padding: 30px;
+    gap: 40px;
+}
+.calculator-touch{
+    /* background-color: teal; */
+    width: 50%;
+    height: 100%;
+}
+.calculator-display{
+    background-color: var(--display-bg);
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* ? displays de dinero */
+
+.display-amount{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.amount-tip h3{
+    color: white;
+    font-size: 1.4em;
+    text-align: start;
+}
+.amount-tip p{
+    color: var(--text-second);
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: start;
+}
+.amount-price{
+    font-size: 2.8em;
+    color: var(--display-text);
+}
+.display-total{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.display-prices{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.display-btn.inactive{
+    filter: opacity(.1);
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.display-btn{
+    filter: opacity(1);
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all .3s;
+}
+.display-btn:hover{
+    color: var(--display-bg);
+    background-color: var(--display-text);
+}
+/* ? first display */
+
+.calculator-touch{
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+}
+.bill{
+    text-align: start;
+    color: var(--text-second);
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-transform: capitalize;
+}
+.bill-input{
+    width: 100%;
+    height: 50px;
+    background-color: var(--input-color);
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    padding-left: 20px;
+    border: 2px solid transparent;
+    transition: border .4s;
+}
+.bill-input:hover{
+    border:2px solid var(--display-text);
+}
+.bill-input input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    text-align: end;
+    border-radius: 0 5px 5px 0;
+    padding-right: 20px;
+    background-color: transparent;
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--display-bg);
+}
+.bill-input img{
+    /* width: 100%; */
+    height: 40%;
+}
+
+.select-tip{
+    /* background-color: brown; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-content: center;
+    color: var(--text-second);
+    text-transform: capitalize;
+    justify-content: center;
+}
+.select-tip h3{
+    width: 100%;
+    text-align: start;
+    font-size: 1.3em;
+}
+.tip{
+    background-color: var(--display-bg);
+    width: 200px;
+    height: 18%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    transition: background 0.3s,color 0.3s;
+}
+.tip:hover{
+    background-color: var(--hover-buton-color);
+    color: var(--display-bg);
+}
+
+.tip-input{
+    background-color: var(--input-color);
+    width: 200px;
+    /* height: ; */
+    border-radius: 5px;
+    font-size: 2em;
+    text-align: center;
+    font-weight: bold;
+    outline: none;
+    border: 2px solid transparent;
+    transition: border .3s;
+    padding-right: 10px;
+    color: var(--display-bg);
+}
+.tip-input:focus{
+    border: 2px solid var(--display-text);
+    text-align: end;
+    /* outline: solid red; */
+}
+.tip-input::placeholder{
+    /* color: ; */
+    text-align: center;
+}
+
+
+
+@media only screen and (max-width: 950px){
+    main{
+        width: auto;
+        height: 100vh;
+        flex-direction: column;
+    }
+    .tip-container{
+        /* background-color: green; */
+        width: auto;
+        height: 100%;
+        align-items: center;
+        /* margin-top: 0; */
+        /* flex-direction: column; */
+        /* display: flex; */
+    }
+    .tip-calculator{
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        /* background-color: red; */
+        flex-direction: column;
+        margin-top: 0;
+        padding: 20px 0;
+        border-radius: 20px 20px 0 0 ;
+    }
+    .select-tip{
+        margin-top: 10px;
+    }
+    .bill{
+        margin-top: 10px;
+    }
+    .tip{
+        width: 45%;
+    }
+    .tip-input{
+        width: 45%;
+    }
+    .calculator-display{
+        min-width: 300px;
+        padding: 20px;
+        height: auto;
+        gap: 30px;
+    }
+    .calculator-touch{
+        min-width: 300px;
+    }
+    .amount-price{
+        font-size: 1.4em;
+    }
+}
+@media only screen and (max-height: 768px) {
+    .tip-calculator{
+        padding: 0;
+        /* height: 120%; */
+    }
+}
