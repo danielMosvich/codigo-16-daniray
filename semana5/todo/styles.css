@@ -23,12 +23,14 @@
     font-size: 1em ;
     cursor: pointer;
     transition: background .4s;
+    display: flex;
+    justify-content: space-between;
 }
-.task > a {
-    float: right;
+.task > div > a {
+    /* float: right; */
     font-size: 0.8em;
 }
-.task > input{
+.task > div > input{
     /* padding: ; */
     transform: scale(1.5);
     margin-right: 10px;
@@ -45,21 +47,21 @@
 .done:hover{
     background-color: rgb(97, 134, 255);
 }
-.done > a {
+.done> div  > a {
     display: none;
 }
-.delete > input{
+.delete > div > input{
     display: none;
 }
-.delete > span{
-    margin-left: 32px;
+.delete > div > span{
+    margin-left: 28px;
     color: #aaa;
-}
-.delete{
     text-decoration: line-through red;
-    /* text-decoration-color: red; */
 }
-.delete > a {
+/* .delete{
+    /* text-decoration-color: red; */
+/* } */ 
+.delete >div > a {
     display: none;
 }
 
@@ -85,4 +87,10 @@
 }
 .form > input[type='button']:hover{
     background-color: #ddd;
+}
+
+#settings {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
 }

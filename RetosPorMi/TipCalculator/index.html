@@ -23,18 +23,18 @@
                     </div>
                     <div class="select-tip">
                         <h3>Select tip %</h3>
-                        <div class="tip" id="tip_1">5%</div>
-                        <div class="tip" id="tip_2">10%</div>
-                        <div class="tip" id="tip_3">15%</div>
-                        <div class="tip" id="tip_4">25%</div>
-                        <div class="tip" id="tip_5">50%</div>
-                        <input class="tip-input"type="text" placeholder="Custom" id="cusmtom-input">
+                        <div class="tip" id="tip1">5%</div>
+                        <div class="tip" id="tip2">10%</div>
+                        <div class="tip" id="tip3">15%</div>
+                        <div class="tip" id="tip4">25%</div>
+                        <div class="tip" id="tip5">50%</div>
+                        <input class="tip-input"type="text" placeholder="Custom" id="custom-input">
                     </div>
                     <div class="bill">
                         <h3>Number of people</h3>
                         <div class="bill-input">
                             <img src="imgs/icon-person.svg" alt="">
-                            <input type="text" placeholder="0" >
+                            <input type="text" placeholder="0" id="nop">
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@
                                 <p>/ person</p>
                             </div>
                             <div class="amount-price">
-                                <h2>$0.00</h2>
+                                <h2 id="tip_amount">$0.00</h2>
                             </div>
                         </div>
                         <div class="display-total">
@@ -57,11 +57,11 @@
                                 <p>/ person</p>
                             </div>
                             <div class="amount-price">
-                                <h2>$0.00</h2>
+                                <h2 id="total_amount">$0.00</h2>
                             </div>
                         </div>
                     </div>
-                    <button class="display-btn inactive">Reset</button>
+                    <button class="display-btn inactive" id="reset" >Reset</button>
                 </div>
             </div>
         </div>

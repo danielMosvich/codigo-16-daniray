@@ -115,10 +115,12 @@ main{
     font-weight: bold;
     text-transform: uppercase;
     transition: all .3s;
+    background-color:var(--display-text) ;
+    color: var(--display-bg);
 }
 .display-btn:hover{
     color: var(--display-bg);
-    background-color: var(--display-text);
+    background-color: var(--hover-buton-color);
 }
 /* ? first display */
 
@@ -199,7 +201,7 @@ main{
     transition: background 0.3s,color 0.3s;
 }
 .tip:hover{
-    background-color: var(--hover-buton-color);
+    background-color: var(--display-text);
     color: var(--display-bg);
 }
 
@@ -225,6 +227,11 @@ main{
 .tip-input::placeholder{
     /* color: ; */
     text-align: center;
+}
+
+.tip.active{
+    background-color: var(--display-text);
+    color: var(--display-bg);
 }
 
 
@@ -279,6 +286,7 @@ main{
         font-size: 1.4em;
     }
 }
+
 @media only screen and (max-height: 768px) {
     .tip-calculator{
         padding: 0;
