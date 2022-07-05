@@ -19,81 +19,22 @@ nop.onchange = function () {
 
 let tipPorcentaje = ''
 
-tip1.onclick = function selectTip() {
-    tip1.classList.toggle('active')
-    if(tip1.classList == 'tip active') {
+const tips = document.querySelectorAll('.tip')
+tips.forEach(function(tip){
+    tip.onclick = function(){
+        tip1.classList.remove('active')
         tip2.classList.remove('active')
         tip3.classList.remove('active')
         tip4.classList.remove('active')
         tip5.classList.remove('active')
-        customInput.value = ''
-        tipPorcentaje = 5
+        nop.value = ''
+        tip.classList.add('active')
+        tipPorcentaje = Number(tip.textContent.match(/(\d+)/g))
+        console.log(tipPorcentaje)
     }
-    else {
-        tipPorcentaje = ''
-    }
-}
-tip2.onclick = function selectTip() {
-    tip2.classList.toggle('active')
-    if(tip2.classList == 'tip active') {
-        tip1.classList.remove('active')
-        tip3.classList.remove('active')
-        tip4.classList.remove('active')
-        tip5.classList.remove('active')
-        customInput.value = ''
-        tipPorcentaje = 10
-    }
-    else {
-        tipPorcentaje = ''
-    }
-}
-tip3.onclick = function selectTip() {
-    tip3.classList.toggle('active')
-    if(tip3.classList == 'tip active') {
-        tip1.classList.remove('active')
-        tip2.classList.remove('active')
-        tip4.classList.remove('active')
-        tip5.classList.remove('active')
-        customInput.value = ''
+})
 
-        tipPorcentaje = 15
-    }
-    else {
-        tipPorcentaje = ''
-    }
-}
-tip4.onclick = function selectTip() {
-    tip4.classList.toggle('active')
-    if(tip4.classList == 'tip active') {
-        tip1.classList.remove('active')
-        tip2.classList.remove('active')
-        tip3.classList.remove('active')
-        tip5.classList.remove('active')
-        customInput.value = ''
-
-        tipPorcentaje = 25
-    }
-    else {
-        tipPorcentaje = ''
-    }
-}
-tip5.onclick = function selectTip() {
-    tip5.classList.toggle('active')
-    if(tip5.classList == 'tip active') {
-        tip1.classList.remove('active')
-        tip2.classList.remove('active')
-        tip3.classList.remove('active')
-        tip4.classList.remove('active')
-        customInput.value = ''
-
-        tipPorcentaje = 50
-    }
-    else {
-        tipPorcentaje = ''
-    }
-}
 customInput.onchange = function selectTip() {
-    // const custom = Number(customInput.value)
     console.log(Number(customInput.value))
     tipPorcentaje = ''
     tip1.classList.remove('active')
@@ -101,9 +42,9 @@ customInput.onchange = function selectTip() {
     tip3.classList.remove('active')
     tip4.classList.remove('active')
     tip5.classList.remove('active')
+    nop.value = ''
     tipPorcentaje =  Number(customInput.value)
 }
-
 
 function calcularTip(nop){
     if(nop == "" || nop == 0){
@@ -138,18 +79,15 @@ function reset(){
     if (tip_amount !== '' && tip_amount !== undefined){
         btnReset.classList.remove('inactive')
     }
-
     btnReset.onclick = function(){
-        tip_amount.innerHTML = ''
-        total_amount.innerHTML = ''
+        tip_amount.innerHTML = '$0.00'
+        total_amount.innerHTML = '$0.00'
         billInput.value = ''
         customInput.value = ''
         nop.value = ''
-        tip1.classList.remove('active')
-        tip2.classList.remove('active')
-        tip3.classList.remove('active')
-        tip4.classList.remove('active')
-        tip5.classList.remove('active')
-        btnReset.classList.add('inactive')
+        tips.forEach(function(tip){
+            tip.classList.remove('active')
+            btnReset.classList.add('inactive')
+        })
     }
 }

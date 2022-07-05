@@ -47,11 +47,11 @@ function updateTask(a){
     const task = arrayTask.find(task => task.id === task_id)
     task.update(newText)
 }
-
+//-----------------------------------------------------------
 const chxTaskDone = document.querySelector('#chx_task_done')
 const chxTaskDelete = document.querySelector('#chx_task_delete')
 const chxTaskTodo = document.querySelector('#chx_task_todo')
-
+//-----------------------------------------------------------
 chxTaskDone.onchange = function(){
     showOrHideElement(this.checked,'.todo','.delete')
 }
