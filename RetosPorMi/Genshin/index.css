@@ -1,0 +1,8 @@
+body{
+    background-color: rgb(238, 226, 214);
+}
+img{
+    width: 100%;
+    text-shadow: 0 0 10px black;
+    /* border: solid; */
+}
