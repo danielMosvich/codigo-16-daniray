@@ -11,11 +11,10 @@
   
   .container-modal {
     display: flex;
-    /* background-color: rgba(0, 0, 0, 0.5); */
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    position: relative;
+    /* height: 100vh; */
+    /* position: relative; */
   }
   
   .lost-container {
@@ -49,7 +48,7 @@
   #container {
     width: 600px;
     margin: 30px auto;
-    position: absolute;
+    /* position: absolute; */
     /* z-index: -1; */
   }
   
@@ -149,26 +148,27 @@
     color: blue;
   }
 /* tabla de score */
-  #history > table{
+   table{
     width: 100%;
     border: 1px solid #ddd;
     border-radius: 10px;
+    /* border-collapse: collapse; */
   }
-  #history th, #history td{
+   th, td{
     padding: 10px;
     text-align: center;    
   }
-  #history td, #history th{
+   /* td,  th{
     border-top:1px solid #ddd ;
     border-right: 1px solid #ddd;
+  } */
+  th{
+    border-bottom: 1px solid #ddd;
+    /* border-right: 1px solid #ddd; */
   }
-  #history td:last-child{
-    /* background-color: red; */
-    border-right:none ;
-  }
-  #history th:last-child{
-    border-right: none;
-  }
+  /* thead:last-child{
+    border-radius: 1px solid red;
+  } */
 
   #btn_resetLeaderboard{
     background-color: #0065b2;
@@ -179,7 +179,36 @@
     margin-top: 10px;
     font-size: 1em;
     float: right;
+    margin-top: 20px;
   }
   #btn_resetLeaderboard:disabled{
-    opacity: 0.5;
+    background-color: #ddd;
+    /* opacity: 0.5; */
+  }
+
+  .buscador{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8em;
+  }
+  #buscador_score{
+    /* height: 30px; */
+    padding: 10px;
+    outline: none;
+  }
+  #btn_buscador,#btn_clean_search{
+    background-color: #0065b2;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+  }
+
+  #btn_buscador:disabled{
+    background-color: #ddd;
+  }
+  #btn_clean_search:disabled{
+    background-color: #ddd;
   }

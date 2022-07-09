@@ -48,21 +48,18 @@
           <h3 id="h3_failed_attempts">Fallidos:&nbsp;<span></span></h3>
           <h3 class="h3_score" id="h3_score">Score:&nbsp;<span></span></h3>
         </div>
-        <div id="history">
-          <h2>History</h2>
-          <table cellspacing="0" cellpadding="0">
-            <tr>
-              <th>Username</th>
-              <th>Score</th>
-              <th>s_attepts</th>
-              <th>game over</th>
-            </tr>
-            <tr>
-              
-            </tr>
-            </table>
-            <button id="btn_resetLeaderboard" disabled>Restart leaderboard</button>
+        <div class="buscador">
+          <h3>History</h3>
+          <input type="text" id="buscador_score" placeholder="buscar usuario..">
+          <button id="btn_buscador" disabled >Buscar</button>
+          <button id="btn_clean_search" disabled>limpiar Busqueda</button>
         </div>
+        <div id="history">
+          <div id="histoy_container">
+
+          </div>
+        </div>
+        <button id="btn_resetLeaderboard" disabled>Restart leaderboard</button>
       </div>
     </div>
   </body>

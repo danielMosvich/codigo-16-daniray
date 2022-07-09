@@ -72,6 +72,105 @@ const h3_score = document.querySelector("#h3_score");
 const h3_score_finish = document.querySelector("#h3_score_finish");
 const btn_reiniciar = document.querySelector("#btn-reiniciar");
 
+
+
+
+
+
+
+
+
+
+const btn_buscador = document.querySelector('#btn_buscador')
+const buscador_score = document.querySelector('#buscador_score')
+const btn_clean_search = document.querySelector('#btn_clean_search')
+
+
+
+btn_clean_search.onclick = function(){
+  history_container.innerHTML = ''
+  buscador_score.value = ''
+  createTableHistoric()
+}
+buscador_score.addEventListener('keyup',()=>{
+  btn_buscador.disabled = false
+  btn_buscador.addEventListener('click',buscarResultado)
+})
+
+function buscarResultado(){
+  
+  const result = users.filter(user => user.username.toLowerCase().includes(buscador_score.value.toLowerCase()))
+  if(result == [] || result == ''){
+    history_container.innerHTML = '<h3>no se encontraron resultados</h3>'
+    btn_clean_search.disabled = false
+    return
+  }
+  history_container.innerHTML = ''
+  showResult(result)
+  btn_clean_search.disabled = false
+}
+
+function showResult(result){
+  result.forEach(res =>{
+    
+    const h4 = document.createElement('h4')
+        h4.innerHTML = res.username
+        history_container.appendChild(h4)
+        const table = document.createElement('table')
+        const thead = document.createElement('thead')
+
+        thead.innerHTML = `
+           <tr>
+             <th>Score</th>
+             <th>Attempts</th>
+             <th>✅ </th>
+             <th>❌</th>
+             <th>Game Over</th>
+           </tr>
+        
+        `
+        const tbody = document.createElement('tbody')
+        res.games.forEach(game => {
+            tbody.innerHTML += `
+            <tr> 
+                <td>${game.score.toFixed(2)}</td>
+                <td>${game.attempts}</td>
+                <td>${game.success_attempts}</td>
+                <td>${game.failed_attempts}</td>
+                <td>${new Date(game.gameover_at).toLocaleString("es-PE", {
+                    weekday: "short",
+                    year: "2-digit",
+                    month: "short",
+                    day: "2-digit",
+                    hour: "2-digit",
+                    minute: "2-digit",
+                  })}</td>
+            </tr>
+            `
+        })
+
+        table.appendChild(thead)
+        table.appendChild(tbody)
+        history_container.append(table)
+  })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // KeyDown -> KeyPress -> input value -> KeyUp
 //! al dar un valor al input
 input_pi.addEventListener("keyup", function () {
@@ -154,18 +253,43 @@ function calcScore(now_attempt) {
 function showModal() {
   if (failed_attempts >= 10) {
     // activamos los estilos
+    container_modal.style.overflow = "hidden";
+    container_modal.style.height = '100vh'
     container_modal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
     lost_container.style.display = "block";
+
+    container_modal.style.position = 'relative'
+    container.style.position = 'absolute'
+
     container.style.zIndex = -1;
     input_pi.disabled = true;
     h3_score_finish.querySelector("span").innerText = score.toFixed(2);
     if(user !== null){
-      user.score = score
-      user.attempts = attempts
-      user.failed_attempts = failed_attempts
-      user.success_attempts = success_attempts
-      user.gameover()
+      const user_index = users.findIndex((user_find) => user_find.username === user.username)
+
+    if(user_index === -1){
+      user.games.push({
+        score: score,
+        attempts : attempts,
+        success_attempts: success_attempts,
+        failed_attempts: failed_attempts,
+        gameover_at: user.gameover()
+      })
       addUserToLocalStorage(user)
+    } else{
+      users[user_index].games.push({
+        score: score,
+        attempts : attempts,
+        success_attempts: success_attempts,
+        failed_attempts: failed_attempts,
+        gameover_at: user.gameover()
+      })
+
+      upDateUserDateLocalStorage(users)
+    
+    }
+    
+      // addUserToLocalStorage(user)
     }
   }
 }
