@@ -1,54 +1,5 @@
-const cardArray = [
-    {
-        name: 'fries',
-        img:'./images/fries.png'
-    },
-    {
-        name: 'cheeseburger',
-        img:'./images/cheeseburger.png'
-    },
-    {
-        name: 'hotdog',
-        img:'./images/hotdog.png'
-    },
-    {
-        name: 'ice-cream',
-        img:'./images/ice-cream.png'
-    },
-    {
-        name: 'milkshake',
-        img:'./images/milkshake.png'
-    },
-    {
-        name: 'pizza',
-        img:'./images/pizza.png'
-    },
-    //double
-    {
-        name: 'fries',
-        img:'./images/fries.png'
-    },
-    {
-        name: 'cheeseburger',
-        img:'./images/cheeseburger.png'
-    },
-    {
-        name: 'hotdog',
-        img:'./images/hotdog.png'
-    },
-    {
-        name: 'ice-cream',
-        img:'./images/ice-cream.png'
-    },
-    {
-        name: 'milkshake',
-        img:'./images/milkshake.png'
-    },
-    {
-        name: 'pizza',
-        img:'./images/pizza.png'
-    },
-]
+import { cardArray } from "./cards.js";
+
 
 cardArray.sort(() => 0.5 - Math.random())
 
@@ -56,12 +7,12 @@ const gridDisplay = document.querySelector('#grid')
 const resultDisplay = document.querySelector('#result')
 let cardsChosen = []
 let cardsChosenId = []
-let carsWon = []
+let cardsWon = []
 
 function createBoard(){
     for(let i = 0; i < cardArray.length; i++){
         const card = document.createElement('img')
-        card.setAttribute('src', './images/blank.png')
+        card.src = './images/blank.png'
         card.setAttribute('data-id', i)
         card.addEventListener('click', flipcard)
         gridDisplay.appendChild(card)
@@ -74,27 +25,39 @@ function checkMatch(){
     const cards = document.querySelectorAll('img')
     const optionOneId = cardsChosenId[0]
     const optionTwoId = cardsChosenId[1]
+    if(cardsChosen.length > 2){
+        alert('mas lento pendejo, de 1 en 1, ahora todo de nuevo! >:c')
+        cardsChosen = []
+        cardsChosenId = []
+        for(let i = 0; i < cards.length; i++){
+            cardsWon = []
+            cards[i].setAttribute('src', './images/blank.png')
+        }
+        return
+    }
     if (optionOneId === optionTwoId){
-        cards[optionOneId].setAttribute('src', 'images/blank.png')
-        cards[optionTwoId].setAttribute('src', 'images/blank.png')
-        alert('no le des 2 veces a lo mismo, imbecil!')
+        cards[optionOneId].src = 'images/blank.png'
+        cards[optionTwoId].src = 'images/blank.png'
+        alert('no le des 2 veces a lo mismo, imbecil! me crees gil? ah?! dime pues, dime!!')
         // return
     } else if (cardsChosen[0] === cardsChosen[1]){
-        alert('chatch')
-        cards[optionOneId].setAttribute('src', './images/white.png')
-        cards[optionTwoId].setAttribute('src', './images/white.png')
+        alert('bien!')
+        cards[optionOneId].src = './images/copa.jpg'
+        cards[optionOneId].style.width = '100px'
+        cards[optionTwoId].src = './images/copa.jpg'
+        cards[optionTwoId].style.width = '100px'
         cards[optionOneId].removeEventListener('click', flipcard)
         cards[optionTwoId].removeEventListener('click', flipcard)
-        carsWon.push(cardsChosen)
+        cardsWon.push(cardsChosen)
     } else{
-        cards[optionOneId].setAttribute('src', './images/blank.png')
-        cards[optionTwoId].setAttribute('src', './images/blank.png')
+        cards[optionOneId].src = './images/blank.png'
+        cards[optionTwoId].src = './images/blank.png'
         alert('intenta de nuevo xd')
     }
     cardsChosen = []
     cardsChosenId = []
-    resultDisplay.textContent = carsWon.length
-    if(carsWon.length === cardArray.length/2){
+    resultDisplay.textContent = cardsWon.length
+    if(cardsWon.length === cardArray.length/2){
         resultDisplay.textContent = 'ganaste!'
     }
     

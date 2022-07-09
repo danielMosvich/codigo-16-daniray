@@ -82,77 +82,33 @@ const btn_reiniciar = document.querySelector("#btn-reiniciar");
 
 
 const btn_buscador = document.querySelector('#btn_buscador')
-const buscador_score = document.querySelector('#buscador_score')
+const buscador_input = document.querySelector('#buscador_score')
 const btn_clean_search = document.querySelector('#btn_clean_search')
 
 
 
 btn_clean_search.onclick = function(){
   history_container.innerHTML = ''
-  buscador_score.value = ''
+  buscador_input.value = ''
   createTableHistoric()
 }
-buscador_score.addEventListener('keyup',()=>{
+buscador_input.addEventListener('keyup',()=>{
   btn_buscador.disabled = false
   btn_buscador.addEventListener('click',buscarResultado)
 })
 
 function buscarResultado(){
   
-  const result = users.filter(user => user.username.toLowerCase().includes(buscador_score.value.toLowerCase()))
+  const result = users.filter(user => user.username.toLowerCase().includes(buscador_input.value.toLowerCase()))
+
   if(result == [] || result == ''){
     history_container.innerHTML = '<h3>no se encontraron resultados</h3>'
     btn_clean_search.disabled = false
     return
   }
   history_container.innerHTML = ''
-  showResult(result)
+  createTableHistoric(result)
   btn_clean_search.disabled = false
-}
-
-function showResult(result){
-  result.forEach(res =>{
-    
-    const h4 = document.createElement('h4')
-        h4.innerHTML = res.username
-        history_container.appendChild(h4)
-        const table = document.createElement('table')
-        const thead = document.createElement('thead')
-
-        thead.innerHTML = `
-           <tr>
-             <th>Score</th>
-             <th>Attempts</th>
-             <th>✅ </th>
-             <th>❌</th>
-             <th>Game Over</th>
-           </tr>
-        
-        `
-        const tbody = document.createElement('tbody')
-        res.games.forEach(game => {
-            tbody.innerHTML += `
-            <tr> 
-                <td>${game.score.toFixed(2)}</td>
-                <td>${game.attempts}</td>
-                <td>${game.success_attempts}</td>
-                <td>${game.failed_attempts}</td>
-                <td>${new Date(game.gameover_at).toLocaleString("es-PE", {
-                    weekday: "short",
-                    year: "2-digit",
-                    month: "short",
-                    day: "2-digit",
-                    hour: "2-digit",
-                    minute: "2-digit",
-                  })}</td>
-            </tr>
-            `
-        })
-
-        table.appendChild(thead)
-        table.appendChild(tbody)
-        history_container.append(table)
-  })
 }
 
 

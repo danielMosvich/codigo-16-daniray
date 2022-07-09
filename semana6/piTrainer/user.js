@@ -37,10 +37,10 @@ if(users.length !== 0){
 }  
 //console.log(users)
 
-function createTableHistoric(){
+function createTableHistoric(arrayUsers = users){
     // const table_history = document.querySelector('#history > table')
     
-    users.forEach(function(user){
+    arrayUsers.forEach(function(user){
         // const gameover_at = new Date(user.gameover_at)
         const h4 = document.createElement('h4')
         h4.innerHTML = user.username
@@ -81,15 +81,6 @@ function createTableHistoric(){
         table.appendChild(thead)
         table.appendChild(tbody)
         history_container.append(table)
-        // const row = document.createElement("tr")
-        // row.innerHTML = `
-        // <td>${user.username}</td>
-        // <td>${user.score.toFixed(2)}</td>
-        // <td>${user.success_attempts}</td>
-        // <td>${gameover_at.toLocaleString()}</td>
-        
-        // `
-        // table_history.appendChild(row)
     })
 }
 // in game over_at.toLocaleString() here we can use toLocalDateString() for more details about time data
