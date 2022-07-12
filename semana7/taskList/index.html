@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body{
+        font-family: Helvetica, sans-serif;
+    }
+    .delete{
+        text-decoration: line-through;
+    }
+  </style>
+  <body>
+    <main>
+        <h1>
+            Task List
+        </h1>
+        <section>
+            <input type="text" placeholder="Ingresa el nombre de la tarea" id="input-task">
+            <input type="submit" value="Crear" id="btn-task">
+        </section>
+        <section id="section-task"></section>
+    </main>
+  </body>
+  <!-- !nota recurden que jquery debe estar antes, para que nuestro index.js pueda
+  !usar las funciones de jquery -->
+  <script src="./jquery-3.6.0.min.js"></script>
+  <script src="./index.js"></script>
+  <script src="./task.js"></script>
+</html>

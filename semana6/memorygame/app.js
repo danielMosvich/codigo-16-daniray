@@ -59,6 +59,7 @@ function checkMatch(){
     resultDisplay.textContent = cardsWon.length
     if(cardsWon.length === cardArray.length/2){
         resultDisplay.textContent = 'ganaste!'
+        // window.location.href = "https://www.delftstack.com/howto/";
     }
     
 }
