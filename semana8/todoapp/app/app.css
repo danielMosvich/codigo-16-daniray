@@ -1,0 +1,9 @@
+.delete{
+    /* text-decoration: line-through; */
+    background-color: rgb(231, 231, 231);
+}
+.delete span{
+    color: rgb(99, 99, 99);
+    text-decoration: line-through;
+}
+
